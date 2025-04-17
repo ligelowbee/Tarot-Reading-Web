@@ -1,0 +1,142 @@
+:root {
+    --img-width: 340px;
+    --img-height: 600px;
+    --card-vgap: 40px;
+}
+
+body {
+    background: #484848;
+    color:lightgray;
+    text-align: center;
+    margin: 100px;
+}
+
+body h1 {
+    text-align: center;
+    font-size: 3em;
+    padding: 0px;
+}
+
+#layout-container {
+    background-color: #383838;
+    border: 50px solid #383838;
+    border-radius: 30px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: calc( var(--img-width) * 5 + 50px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--img-width));
+    gap: var(--card-vgap);
+}
+
+.card {
+    display: block;
+    width: var(--img-width);
+    height: var(--img-height);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    perspective: 1000px;
+    transition: transform 0.8s;
+}
+
+.card:hover { 
+    z-index: 1;
+}
+
+
+.card-inner {
+    width: var(--img-width);
+    height: var(--img-height);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card-inner.is-flipped {
+    transform: scale(170%) rotateY(180deg);
+}
+
+#card-2 .card-inner.is-flipped {
+    transform: scale(170%) rotate(-90deg) rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+    position: absolute;
+    width: var(--img-width);
+    height: var(--img-height);
+    backface-visibility: hidden;
+}
+
+#card-backing img,
+.card-front img {
+    width: var(--img-width);
+    height: var(--img-height);
+    margin-left: auto;
+    margin-right: auto;
+    background: black;
+}
+
+
+.card-back {
+    background-color: #000000CC;
+    color: lightgray;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    text-align: left;
+    font-size: 1em%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.card-back .card-title {
+    text-align: center;
+    font-size: 150%;
+    font-style: bold;
+}
+
+#card-backing {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0px; 
+}
+
+#card-backing:hover {
+    z-index: 0;
+}
+
+/* turn and lay 2nd card over first */
+#card-2 {
+  transition: transform 0.8s;
+  margin-top: calc(-1 * ((var(--img-height) + var(--img-width)) / 2
+                    + var(--card-vgap)));
+  margin-bottom: calc((-1 * var(--img-width) / 2) + var(--card-vgap));
+  transform: rotate(90deg);
+}
+
+/* adjust column width for turned card */
+#col-2 {
+    width: calc(var(--img-height));
+}
+
+/* round the cards */
+.card-front img,
+#card-backing img,
+.card-back { 
+    border: 1px solid black;
+    border-radius: 20px;
+}
