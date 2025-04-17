@@ -12,6 +12,12 @@ Clicking on a card flips it over and provies it's meanings. The meanings for the
 Waite-Smith deck are from A. E. Waite. The Tarot de Marseille meanings are from
 Yoav Ben-dov.
 
+Included decks:
+- 1760 Nicolas Conver
+- 1880 Carlo Dellarocca
+- 1909 Rider-Waite-Smith
+- 2010 Yoav Ben-Dev (Conver restoration)
+
 To install and run:
 ```
 git clone https://github.com/ligelowbee/Tarot-Reading-Web.git
