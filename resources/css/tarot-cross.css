@@ -103,7 +103,7 @@ h1 {
 
 
 .card-back {
-    background-color: #000000CC;
+    background-color: #1b1a23;
     color: lightgray;
     transform: rotateY(180deg);
 }
