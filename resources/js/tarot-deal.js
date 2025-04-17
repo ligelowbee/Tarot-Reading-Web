@@ -108,8 +108,9 @@ function showCard() {
 
 const selectedDeck = getRandomDeck();
 
-const pageTitle = document.getElementById('page-title');
-pageTitle.innerHTML = selectedDeck.replace(/_/g,' ');
+const deckTitle = document.getElementById('deck-title');
+deckTitle.innerHTML = selectedDeck.replace(/_/g,' ');
+deckTitle.innerHTML = deckTitle.innerHTML.replace(/priv-/g,'');
 
 const backingImage = document.getElementById('backing-image');
 const cardBacking = document.getElementById('card-backing')
@@ -117,7 +118,6 @@ backingImage.src = imageDir + selectedDeck + '/XBA.jpg';
 backingImage.alt = backingImage.src;
 backingImage.addEventListener('click', function () {showCard();} );
 
-// change number of cards created based on html title name
 switch (document.title.split(' - ')[1]) {
     case 'Celtic Cross':
         var numCards = 10;
@@ -126,6 +126,5 @@ switch (document.title.split(' - ')[1]) {
         var numCards = 1;
         break;
 };
-
 const selectedCardCodes = getRandomCards(numCards);
 
