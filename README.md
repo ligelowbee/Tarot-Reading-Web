@@ -16,7 +16,7 @@ Included decks:
 - [1760 Nicolas Conver](https://gallica.bnf.fr/ark:/12148/btv1b10520316w)
 - [1880 Carlo Dellarocca](https://www.britishmuseum.org/collection/object/P_1896-0501-12)
 - [1909 Rider-Waite-Smith](https://en.wikipedia.org/wiki/Rider%E2%80%93Waite_Tarot)
-- [2010 Yoav Ben-Dev (Conver restoration)](https://cbdtarot.com/the-cards/)
+- [2010 Yoav Ben-Dov (Conver restoration)](https://cbdtarot.com/the-cards/)
 
 To install and run:
 ```
